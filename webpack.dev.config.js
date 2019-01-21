@@ -16,9 +16,11 @@ module.exports = (env, argv) => {
             publicPath: '/',
             filename: 'scripts/[name].[hash].js'
         },
+        externals: {
+            'jquery': 'jQuery'
+        },
         module: {
-            rules: [
-                {
+            rules: [{
                     test: /\.(html)$/,
                     use: {
                         loader: 'html-loader',
@@ -51,7 +53,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/index.html',
                 chunks: ['libs', 'index'],
-                inject: 'body',
+                inject: 'head',
                 minify: false,
                 hash: false
             }),
