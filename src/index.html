@@ -8,27 +8,38 @@
     <title>首页</title>
 </head>
 <body controller="indexController">
+    <div id="header">
+        <div class="logo"></div>
+        <div class="navi">
+            <a href="" class="checked">首页</a>
+            <a href="" >首页</a>
+            <a href="" >首页</a>
+            <a href="" >首页</a>
+            <a href="" >首页</a>
+        </div>
+    </div>
     <div id="fullpage">
         <div class="section">
-            <div class="swiper-slide section1 checked">
-                <div class="banner"></div>
-                <h1 class="title1">新零售</h1>
-                <h1 class="title2">新电商</h1>
-            </div>
-            <div class="swiper-slide section2">
-                <div class="banner"></div>
-                <div class="title3">
-                    <p>中国领先的信用卡管理专家！</p>
-                    <p>中国优秀的信用卡产品运营商！</p>
-                    <p>中国最好的金融支付服务平台！</p>
+            <div class="swiper-container home-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide checked">
+                        <div class="banner banner1"></div>
+                        <h1 class="title1">新零售</h1>
+                        <h1 class="title2">新电商</h1>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner banner2"></div>
+                        <div class="title3">
+                            <p>中国领先的信用卡管理专家！</p>
+                            <p>中国优秀的信用卡产品运营商！</p>
+                            <p>中国最好的金融支付服务平台！</p>
+                        </div>
+                        <div class="title4"></div>
+                    </div>
                 </div>
-                <div class="title4"></div>
-            </div>
-            <div class="swiper-slide section3">
-                <div class="banner"></div>
-                <div class="title5"></div>
-                <div class="title6"></div>
-                <div class="title7"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="section section4">

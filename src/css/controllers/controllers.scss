@@ -1,6 +1,6 @@
 @import './indexController.scss';
 
-/* 导航圈圈 */
+/* 重置fullpage圈圈 */
 #dn-nav {
 	position: fixed;
 	top: 50%;
@@ -56,3 +56,44 @@
 	background: #de262e;
 }
 
+// 重置swiper的按钮
+.home-swiper-container {
+    &:hover {
+        .swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet {
+            opacity: 1;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 0.3s ease;
+        opacity: 0;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    .swiper-button-prev {
+        left: 50px;
+        background-image: url(../../static/images/arrowLeft.png);
+        background-size: 50% 50%;
+    }
+    .swiper-button-next {
+        right: 50px;
+        background-image: url(../../static/images/arrowRight.png);
+        background-size: 50% 50%;
+    }
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+        border: 3px solid rgba(0, 0, 0, 0.5);
+        position: relative;
+        top: 3px;
+    }
+}
