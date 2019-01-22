@@ -1,7 +1,7 @@
 @import './indexController.scss';
 
 /* 重置fullpage圈圈 */
-#dn-nav {
+#fp-nav {
 	position: fixed;
 	top: 50%;
 	z-index: 100;
@@ -9,21 +9,18 @@
 	opacity: 1;
 	-webkit-transform: translate3d(0, 0, 0);
 }
-#dn-nav.right {
-	right: 17px;
-}
-#dn-nav ul {
+#fp-nav ul {
 	margin: 0;
 	padding: 0;
 }
-#dn-nav ul li {
+#fp-nav ul li {
 	position: relative;
 	display: block;
 	margin: 7px;
 	width: 15px;
 	height: 15px;
 }
-#dn-nav ul li a {
+#fp-nav ul li a {
 	position: relative;
 	z-index: 1;
 	display: block;
@@ -32,7 +29,7 @@
 	text-decoration: none;
 	cursor: pointer;
 }
-#dn-nav ul li a span {
+#fp-nav ul li a span {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -48,7 +45,7 @@
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
-#dn-nav ul li a.active span, #dn-nav ul li:hover a.active span {
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
 	margin: -7px 0 0 -7px;
 	width: 15px;
 	height: 15px;

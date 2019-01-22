@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
     const devMode = argv.mode !== 'production';
@@ -16,7 +17,7 @@ module.exports = (env, argv) => {
             filename: 'scripts/[name].[hash].js'
         },
         externals: {
-            'jquery': 'jQuery'
+            jquery: 'jQuery'
         },
         module: {
             rules: [
@@ -32,7 +33,11 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(sa|sc|c)ss$/,
-                    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'sass-loader'
+                    ]
                 },
                 {
                     test: /\.(png|svg|jpg|gif)$/,
@@ -46,8 +51,17 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
+            new CopyWebpackPlugin([
+                {
+                    from: 'src/favicon.ico',
+                    to: 'favicon.ico',
+                    toType: 'file'
+                }
+            ]),
             new MiniCssExtractPlugin({
-                filename: devMode ? 'styles/[name].css' : 'styles/[name].[hash].css',
+                filename: devMode
+                    ? 'styles/[name].css'
+                    : 'styles/[name].[hash].css'
                 // chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
             }),
             new HtmlWebpackPlugin({
@@ -59,4 +73,4 @@ module.exports = (env, argv) => {
             })
         ]
     };
-}
+};
