@@ -54,7 +54,7 @@
 }
 
 // 重置swiper的按钮
-.home-swiper-container {
+.swiper-container.home {
     &:hover {
         .swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet {
             opacity: 1;
