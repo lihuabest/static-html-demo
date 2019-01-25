@@ -94,3 +94,7 @@
         top: 3px;
     }
 }
+.swiper-wrapper {
+    transition-timing-function: cubic-bezier(.77,.1,.43,1);
+}
+

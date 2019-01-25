@@ -28,7 +28,8 @@ export default {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
-                }
+                },
+                speed: 500
             });
 
             createMap(); // 创建地图

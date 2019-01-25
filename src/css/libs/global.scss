@@ -93,4 +93,27 @@ $unit: 1px;
     vertical-align: middle;
 }
 
-
+a {
+    color: #666;
+    text-decoration: none;
+    &.qqBtn, &.phoneBtn {
+        display: inline-block;
+        padding-top: 5px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 26px;
+            height: 25px;
+            vertical-align: middle;
+            margin-right: 5px;
+            background: url(../../static/images/cicon.png) no-repeat;
+            background-size: 25px 50px;
+        }
+    }
+    &.phoneBtn {
+        &::before {
+            background: url(../../static/images/cicon.png) no-repeat 0 bottom;
+            background-size: 25px 50px;
+        }
+    }
+}
